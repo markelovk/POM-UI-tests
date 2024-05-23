@@ -1,0 +1,22 @@
+from selenium.webdriver.common.by import By
+
+class OrderPageLocators:
+    text_scooter_for = [By.XPATH, "//*[text()='Для кого самокат']"]
+    field_name = [By.XPATH,"//input[@placeholder = '* Имя']"]
+    field_surname = [By.XPATH,"//input[@placeholder = '* Фамилия']"]
+    field_adress = [By.XPATH,"//input[@placeholder = '* Адрес: куда привезти заказ']"]
+    field_metro_station = [By.XPATH,"//input[@placeholder = '* Станция метро']"]
+    choose_metro_station = [By.XPATH,"//div[text() = 'Лубянка']"]
+    field_telephone = [By.XPATH,"//input[@placeholder = '* Телефон: на него позвонит курьер']"]
+    button_next = [By.XPATH, "//button[text()='Далее']"]
+    text_about_rent = [By.XPATH,"//*[text()='Про аренду']"]
+    field_when_bring_scooter = [By.XPATH,"//input[@placeholder = '* Когда привезти самокат']"]
+    calendar_when_bring_scooter = [By.XPATH, "//div[@class='react-datepicker__tab-loop']"]
+    date_of_calendar = [By.XPATH, "//div[text()='21']"]
+    rental_period = [By.XPATH,'//*[@aria-haspopup="listbox"]']
+    choose_rental_period = [By.XPATH, "//div[text()='сутки']"]
+    field_rental_period = [By.XPATH,"//div[contains(@class, 'Dropdown-placeholder') and text()='сутки']"]
+    middle_button_order = [By.XPATH,"//button[contains(@class, 'Button_Middle') and text()='Заказать']"]
+    text_want_order = [By.XPATH,"//*[text()='Хотите оформить заказ?']"]
+    button_yes = [By.XPATH,"//button[text()='Да']"]
+    order_completed = [By.XPATH, "//button[text()='Посмотреть статус']"]

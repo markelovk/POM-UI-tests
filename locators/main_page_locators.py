@@ -1,0 +1,23 @@
+from selenium.webdriver.common.by import By
+
+class MainPageLocators:
+    text_main_page_scooter = [By.XPATH, "//*[text()='Самокат ']"]
+    upper_button_order = [By.CLASS_NAME,'Button_Button__ra12g']
+    middle_button_order = [By.XPATH,"//*[contains(@class, 'Button_Middle')]"]
+    question_how_much_is_this = [By.ID,'accordion__heading-0']
+    answer_how_much_is_this = [By.XPATH,"//*[@id='accordion__panel-0']/p"]
+    question_want_any_scooters = [By.ID,'accordion__heading-1']
+    answer_want_any_scooters = [By.XPATH,"//*[@id='accordion__panel-1']/p"]
+    question_how_calculate_rent_time = [By.ID, 'accordion__heading-2']
+    answer_how_calculate_rent_time = [By.XPATH, "//*[@id='accordion__panel-2']/p"]
+    question_can_scooter_order_today = [By.ID, 'accordion__heading-3']
+    answer_can_scooter_order_today = [By.XPATH, "//*[@id='accordion__panel-3']/p"]
+    question_can_extend_or_return_scooter_before = [By.ID, 'accordion__heading-4']
+    answer_can_extend_or_return_scooter_before = [By.XPATH, "//*[@id='accordion__panel-4']/p"]
+    question_bring_charger_with_scooter = [By.ID, 'accordion__heading-5']
+    answer_bring_charger_with_scooter = [By.XPATH, "//*[@id='accordion__panel-5']/p"]
+    question_can_cancell_order = [By.ID, 'accordion__heading-6']
+    answer_can_cancell_order = [By.XPATH, "//*[@id='accordion__panel-6']/p"]
+    question_bring_outside_mkad =  [By.ID, 'accordion__heading-7']
+    answer_bring_outside_mkad = [By.XPATH, "//*[@id='accordion__panel-7']/p"]
+    button_accept_cookie = [By.XPATH, "//button[text()='да все привыкли']"]
