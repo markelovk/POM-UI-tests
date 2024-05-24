@@ -1,8 +1,6 @@
 import allure
 import pytest
 from selenium import webdriver
-from locators.main_page_locators import MainPageLocators
-from pages.base_page import BasePage
 from data import Sites
 
 @allure.step('Открытие браузера, переход на страницу самоката, закрытие браузера')
