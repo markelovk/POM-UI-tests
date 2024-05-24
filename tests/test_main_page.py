@@ -1,8 +1,6 @@
 import allure
 import pytest
 from pages.main_page import MainPage
-from selenium.webdriver.support.wait import WebDriverWait as WW
-from selenium.webdriver.support import expected_conditions as ec
 from conftest import driver
 from data import Data, Sites
 
@@ -29,6 +27,7 @@ class TestMainPage():
     ])
     def test_click_questions(self, driver, click_method, answer_method, expected_text):
         main_page = MainPage(driver)
+        main_page.waiting_load_element()
         main_page.accept_cookie()
         main_page.scroll_to_faq()
         click_method(main_page)
@@ -39,6 +38,7 @@ class TestMainPage():
     @allure.description('Проверка перехода на главную страницу Самоката при клике на логотип ')
     def test_click_logo_scooter(self, driver):
         main_page = MainPage(driver)
+        main_page.waiting_load_element()
         main_page.click_button_order()
         main_page.click_logo_scooter()
         current_url = main_page.check_page_current_url()
@@ -48,7 +48,7 @@ class TestMainPage():
     @allure.description('Проверка перехода на главную страницу Яндекс Дзена при клике на логотип ')
     def test_click_logo_yandex(self, driver):
         main_page = MainPage(driver)
+        main_page.waiting_load_element()
         main_page.click_logo_yandex()
-        WW(driver, 20).until(ec.url_to_be(Sites.yandex_url))
         current_url = main_page.check_page_current_url()
         assert current_url == Sites.yandex_url

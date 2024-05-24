@@ -10,7 +10,5 @@ from data import Sites
 def driver():
     driver = webdriver.Firefox()
     driver.get(Sites.main_page_scooter_url)
-    base_page = BasePage(driver)
-    base_page.waiting_visible_element(MainPageLocators.text_main_page_scooter)
     yield driver
     driver.quit()

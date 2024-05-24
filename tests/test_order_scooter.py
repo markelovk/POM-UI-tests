@@ -10,6 +10,7 @@ class TestOrderScooter():
                         'И дальнейшее заполнения данных на двух страницах до появления всплывающего окна с сообщением об успешном создании заказа')
     def test_order_by_button_in_the_header(self, driver):
         order_page = OrderPage(driver)
+        order_page.waiting_load_element()
         order_page.accept_cookie()
         order_page.click_button_order()
         order_page.make_scooter_order_page_1(DataSet.data_set_1)
@@ -23,6 +24,7 @@ class TestOrderScooter():
                         'И дальнейшее заполнения данных на двух страницах до появления всплывающего окна с сообщением об успешном создании заказа')
     def test_order_by_button_in_the_middle(self, driver):
         order_page = OrderPage(driver)
+        order_page.waiting_load_element()
         order_page.accept_cookie()
         order_page.click_middle_button_order()
         order_page.make_scooter_order_page_1(DataSet.data_set_2)

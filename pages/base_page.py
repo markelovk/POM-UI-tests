@@ -29,6 +29,13 @@ class BasePage:
     def waiting_clickable_element(self, locator):
         WW(self.driver, 10).until(ec.element_to_be_clickable(locator))
 
+    @allure.step('Ожидание загрузки сайта')
+    def waiting_to_be_element(self, locator):
+        WW(self.driver, 20).until(ec.url_to_be(locator))
+
+    def waiting_load_element(self):
+        self.waiting_visible_element(MainPageLocators.text_main_page_scooter)
+
     @allure.step('Нажатие на кнопку принятия куки')
     def accept_cookie(self):
         self.click_element(MainPageLocators.button_accept_cookie)

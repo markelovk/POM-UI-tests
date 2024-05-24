@@ -1,4 +1,5 @@
 import allure
+from data import Sites
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
 from locators.logo_locators import LogoLocators
@@ -90,3 +91,4 @@ class MainPage(BasePage):
     def click_logo_yandex(self):
         self.click_element(LogoLocators.button_logo_dzen)
         self.switch_to_new_tab()
+        self.waiting_to_be_element(Sites.yandex_url)
